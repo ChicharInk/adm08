@@ -10,7 +10,10 @@ https://github.com/jonmircha/adm08
 * [Presentación de Introducción](http://jonmircha.github.io/slides-web/)
 * [Videotutorial para configurar Visual Studio Code](https://www.youtube.com/watch?v=lHs99G0m754)
 
-## Tarea
+## Tarea Sesión 1:
 
 * Traer un layout de mi Curriculum (.pdf)
 * Leer Capítulos 1 al 6 de [Introducción a XHTML](http://librosweb.es/libro/xhtml/)
+
+## Tarea Sesión 2:
+* Leer Capítulos 1 al 4 de [Introducción a CSS](http://librosweb.es/libro/css/)

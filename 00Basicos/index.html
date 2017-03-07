@@ -1,14 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Introducción al Diseño Web</title>
+	<meta name="description" content="En este documento estamos aprendiendo HTML y CSS">
+	<link rel="icon" href="./img/bextlan.png">
+	<link rel="stylesheet" href="./css/style.css">
+	<style>
+		li {
+			color: blue;
+		}
+	</style>
 </head>
 <body>
+	<h1>Introducción al Diseño Web</h1>
+	<h2>HTML (<i>Hyper Text Markup Language</i>)</h2>
 	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quas aliquid, ut voluptas, consequuntur nulla unde nostrum aperiam deleniti corrupti excepturi incidunt dolorum laboriosam dolor ad labore laborum asperiores similique?
+		HTML es un lenguaje de marcado de hiper texto, define la <mark><b>estructura</b></mark> y el <mark><b>contenido</b></mark> del documento. Esta basado en etiquetas y atributos. Puedes revisar todas las etiquetas en <a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">W3 Schools</a>.
 	</p>
+	<h2>CSS (<i>Cascading Style Sheets</i>)</h2>
+	<p>
+		CSS es un lenguaje que da <mark><b>presentación</b></mark> a documentos HTML. Los estilos se pueden aplicar de 3 formas:
+	</p>
+	<ol>
+		<li style="color: red;">En linea con el atributo style</li>
+		<li>En la cabecera del documento con la etiqueta style</li>
+		<li>Externamente desde una etiqueta link</li>
+	</ol>
+	<h2>Responsive Design</h2>
+	<p>
+		Es la técnica actual para hacer Diseño Web MultiDispositivo y consta de 3 principios:
+	</p>
+	<ol>
+		<li>Maquetación Fluida</li>
+		<li>Multimedia Flexible</li>
+		<li>Uso de Mediaqueries</li>
+	</ol>
+	<p>
+		El Responsive Design tiene 2 enfoques:
+	</p>
+	<ol>
+		<li>
+			<b><i>Mobile First</i></b>
+		</li>
+		<li>
+			<b><i>Desktop First</i></b>
+		</li>
+	</ol>
+	<h3>Herramientas para este curso:</h3>
+	<ul>
+		<li>
+			Editor de Código ( <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> )
+		</li>
+		<li>
+			Navegador Web (Chrome o Firefox)
+		</li>
+		<li>
+			<a href="http://emmet.io/" target="_blank">Emmet</a>
+		</li>
+	</ul>
+	<h3>Más información de este curso:</h3>
+	<!-- ul>li*4>a -->
+	<ul>
+		<li>
+			<a href="http://github.com/jonmircha/adm08" target="_blank">Repositorio de GitHub</a>
+		</li>
+		<li>
+			<a href="http://github.com/jonmircha/adm08/blob/master/teoria-html.md" target="_blank">Teoría HTML</a>
+		</li>
+		<li>
+			<a href="http://github.com/jonmircha/adm08/blob/master/teoria-css.md" target="_blank">Teoría CSS</a>
+		</li>
+		<li>
+			<a href="http://github.com/jonmircha/adm08/blob/master/teoria-rwd.md" target="_blank">Teoría Responsive</a>
+		</li>
+	</ul>	
+	<!--
+		Comentario en HTML
+		h${Encabezado de tipo $}
+		
+		*6
+	-->
+	<h1>Encabezado de tipo 1</h1>
+	<h2>Encabezado de tipo 2</h2>
+	<h3>Encabezado de tipo 3</h3>
+	<h4>Encabezado de tipo 4</h4>
+	<h5>Encabezado de tipo 5</h5>
+	<h6>Encabezado de tipo 6</h6>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt non totam quibusdam incidunt quidem saepe quae dolorum nobis, vel ea, consequuntur, nisi accusantium, accusamus. Excepturi animi vel, unde! Itaque, dolorem.
+	</p>
+	<img src="./img/bextlan.png" alt="Bextlán">
+	<a href="http://bextlan.com" target="_blank">
+		<img src="./img/bextlan.png" alt="Bextlán">
+	</a>
+	<input type="button" value="Botón" disabled>
 </body>
 </html>
