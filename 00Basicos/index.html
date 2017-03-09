@@ -7,17 +7,21 @@
 	<title>Introducción al Diseño Web</title>
 	<meta name="description" content="En este documento estamos aprendiendo HTML y CSS">
 	<link rel="icon" href="./img/bextlan.png">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<style>
+		/*
 		li {
 			color: blue;
 		}
+		*/
 	</style>
 </head>
 <body>
 	<h1>Introducción al Diseño Web</h1>
 	<h2>HTML (<i>Hyper Text Markup Language</i>)</h2>
-	<p>
+	<p id="explicacion-html">
 		HTML es un lenguaje de marcado de hiper texto, define la <mark><b>estructura</b></mark> y el <mark><b>contenido</b></mark> del documento. Esta basado en etiquetas y atributos. Puedes revisar todas las etiquetas en <a href="https://www.w3schools.com/tags/tag_a.asp" target="_blank">W3 Schools</a>.
 	</p>
 	<h2>CSS (<i>Cascading Style Sheets</i>)</h2>
@@ -25,7 +29,8 @@
 		CSS es un lenguaje que da <mark><b>presentación</b></mark> a documentos HTML. Los estilos se pueden aplicar de 3 formas:
 	</p>
 	<ol>
-		<li style="color: red;">En linea con el atributo style</li>
+		<!--<li style="color: red;">En linea con el atributo style</li>-->
+		<li>En linea con el atributo style</li>
 		<li>En la cabecera del documento con la etiqueta style</li>
 		<li>Externamente desde una etiqueta link</li>
 	</ol>
@@ -96,6 +101,29 @@
 	<a href="http://bextlan.com" target="_blank">
 		<img src="./img/bextlan.png" alt="Bextlán">
 	</a>
+	<br><hr><br>
 	<input type="button" value="Botón" disabled>
+	<input type="button" value="Agregar" class="letra-3x redondo bg-azul">
+	<input type="button" value="Buscar" class="letra-2x redondo bg-verde">
+	<input type="button" value="Editar" class="letra-3x redondo bg-rojo">
+	<input type="button" value="Eliminar" class="letra-2x redondo bg-verde">
+	<div class="padre">
+		Soy un elemento Padre
+		<div class="hijo">
+			Soy un elemento hijo
+		</div>
+		<div class="hijo">
+			Soy un elemento hijo
+		</div>
+	</div>
+	<div>Soy una div</div>
+	<i class="fa fa-google-plus fa-5x" aria-hidden="true"></i>
+	<i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
+	<i class="fa fa-twitter fa-5x" aria-hidden="true"></i>
+	<i class="fa fa-github fa-5x" aria-hidden="true"></i>
+	<article class="box">
+		soy un articulo
+		<p class="box">Modelo de Caja en CSS</p>
+	</article>
 </body>
 </html>

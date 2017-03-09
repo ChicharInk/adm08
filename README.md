@@ -17,3 +17,9 @@ https://github.com/jonmircha/adm08
 
 ## Tarea Sesión 2:
 * Leer Capítulos 1 al 4 de [Introducción a CSS](http://librosweb.es/libro/css/)
+
+## Tarea Sesión 3:
+
+* Leer [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Videotutorial Flexbox Propiedades Padre](https://www.youtube.com/watch?v=xKUEM3RHYs8&list=PLvq-jIkSeTUbFYbzpJFN1GLMBZnm9hX5G)
+* * [Videotutorial Flexbox Propiedades Hijo](https://www.youtube.com/watch?v=bKVM9jgQjOQ&list=PLvq-jIkSeTUbFYbzpJFN1GLMBZnm9hX5G)

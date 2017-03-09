@@ -1,3 +1,97 @@
+/* Comentario en CSS */
+
+html {
+	box-sizing: border-box;
+	font-family: 'Baloo Bhaina', cursive;
+	font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit; /*inherit auto initial none*/
+}
+
+/*Selector de Etiqueta*/
 li {
 	background-color: yellow;
+}
+
+p { 
+	color: red;
+}
+
+#explicacion-html {
+	font-size: 200%;
+	color: blue;
+}
+
+p {
+	color: green;
+}
+
+p:hover {
+	color: red;
+}
+
+img:hover {
+	transform: rotate(360deg);
+	transition: all 1s ease-out;
+}
+
+ul li {
+	background-color: skyblue;
+}
+
+ul li:first-child {
+	background-color: pink;
+}
+
+ul li:nth-child(3) {
+	background-color: gray;
+}
+
+ul li:last-child {
+	background-color: orange;
+}
+
+.letra-1x { font-size: 100%; }
+
+.letra-2x { font-size: 200%; }
+
+.letra-3x { font-size: 300%; }
+
+.redondo { border-radius: 8px; }
+
+.bg-azul { background-color: blue; }
+
+.bg-verde { background-color: green; }
+
+.bg-rojo { background-color: red; }
+
+.padre {
+	font-size: 2em;
+	background-color: skyblue;
+	width: 50%;
+	height: 300px;
+	height: 30%;
+	height: 50vh;
+}
+
+.hijo {
+	font-size: 2em;
+}
+
+.hijo:last-child {
+	font-size: 2rem;
+}
+
+.box {
+	border: thin solid #000000;
+	background-color: #CCCCCC;
+	padding: 2rem 1rem;
+	margin: 1rem;
+	box-sizing: border-box;
+	width: 300px;
+	height: 300px;
 }
