@@ -90,6 +90,12 @@ html {
 		no se pueden aplicar números negativos
 	*/
 	/*flex-shrink: 2;*/
+	/* 
+		Define el tamaño de la caja hija flexible
+			Sí flex-direction es row | row-reverse , sobreescribe el valor de la propiedad width
+			Sí flex-direction es column | column-reverse , sobreescribe el valor de la propiedad height
+	*/
+	/* flex-basis: 50%; */
 }
 
 .item:nth-child(10) {
