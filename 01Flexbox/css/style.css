@@ -1,0 +1,98 @@
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.container {
+	margin: auto;
+	padding: 1rem;
+	width: 80vw;
+	height: 50vh;
+	border: medium solid greenyellow;
+	background-color: #333;
+	/* define un caja flexible de bloque o de linea */
+	/* flex | inline-flex */
+	display: flex;
+	/* define el eje principal y el transversal de la caja flexible */
+	/* row | row-reverse | column | column-reverse */
+	flex-direction: row;
+	 /* determina la existencia o no de saltos de línea y su sentido */
+	/* nowrap | wrap | wrap-reverse */
+	flex-wrap: wrap;
+	/* alineación de los hijos en el eje principal (espacio sobrante) */
+	/* flex-start | flex-end | center | space-between | space-around */
+	justify-content: space-between;
+	/* alineación de los hijos en el eje transversal (espacio sobrante) cuando NO HAY saltos de línea (flex-wrap: nowrap) */
+	/* stretch | flex-start | flex-end | center | baseline */
+	align-items: stretch;
+	/* alineación de los hijos en el eje transversal (espacio sobrante) cuando SI HAY saltos de línea (flex-wrap: wrap | wrap-reverse) */
+	/* stretch | flex-start | flex-end | center | space-between | space-around */
+	align-content: space-between;
+}
+
+.item {
+	width: 15%;
+	height: 15%;
+	font-size: 2rem;
+	border: thin solid greenyellow;
+	background-color: #999;
+	/* 
+		Define el tamaño de los elementos hijos en el eje principal 
+		para row modifica width
+		para column modifica height
+	*/
+	/*flex-basis: 30%;*/
+	/*flex-grow: 1;*/
+	/*flex-shrink: 1;*/
+	/*
+		propiedad flex
+
+		shorthand de flex-grow flex-shrink y flex-basis
+			flex: <flex-grow>  <flex-shrink>  <flex-basis>;
+			flex: 0 1 300px;
+
+		flex: auto;
+			es equivalente a flex: 1 1 auto;
+			dimensiona el elemento según su ancho y alto
+			y lo hace flexible para absorber espacio sobrante del eje principal
+
+		flex: none;
+			es equivalente a flex: 0 0 auto;
+			dimensiona el elemento según su ancho y alto
+			y lo hace inflexible para absorber espacio sobrante del eje principal
+	*/
+    /* 
+		cambia el orden de colocación en el HTML, funciona como z-index
+		acepta valores positivos y negativos, por defecto 0
+		valores positivos colocan AL FINAL DE LA PILA, negativos AL PRINCIPIO.
+	*/
+	/* sobreescribe la propiedad align-items para el elemento, funciona cuando NO HAY SALTOS DE LÍNEA */
+	/* auto | flex-start | flex-end | center | baseline | stretch */
+	/*align-self: center;*/
+	/* 
+		SI HAY ESPACIO SOBRANTE indica lo que puede "crecer" un elemento para ocuparlo.
+		el número indica la proporción en la que se lo reparten
+		NO SIGNIFICA QUE VAYA A SER EL DOBLE QUE EL OTRO, SINO QUE VA A RECIBIR EL DOBLE DEL ESPACIO VACÍO
+		por defecto, no crecen (0)
+		no se pueden aplicar números negativos
+	*/
+	/*flex-grow: 1;*/
+	/*
+		SI HAY DESBORDAMIENTO indica lo que puede "encoger" un elemento
+		por defecto, encogen (1)
+		no se pueden aplicar números negativos
+	*/
+	/*flex-shrink: 2;*/
+}
+
+.item:nth-child(10) {
+	font-size: 4rem;
+	/*height: 30%;*/
+}
