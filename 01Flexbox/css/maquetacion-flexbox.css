@@ -1,0 +1,37 @@
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+/*
+	Layout Mobile First
+		CSS General -> Mobile  hasta 480px   (1 columna)
+		MediaQueries
+								-> Tablet  hasta 1024px  (2 columna)
+								-> Desktop más de 1024px (3 columna)
+*/
+
+.container {
+	border: medium solid greenyellow;
+	background-color: #333;
+}
+
+.item {
+	border: thin solid greenyellow;
+	background-color: #999;
+}
+
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 1024px) {
+
+}

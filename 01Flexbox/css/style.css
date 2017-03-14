@@ -43,6 +43,8 @@ html {
 	font-size: 2rem;
 	border: thin solid greenyellow;
 	background-color: #999;
+	flex: auto;
+	order: 0;
 	/* 
 		Define el tamaño de los elementos hijos en el eje principal 
 		para row modifica width
@@ -101,4 +103,11 @@ html {
 .item:nth-child(10) {
 	font-size: 4rem;
 	/*height: 30%;*/
+	/*flex-basis: 30%;*/
+	order: -1;
+}
+
+/*.item:nth-child(even) {*//*par*/
+	.item:nth-child(odd) {/*impar*/
+	order: 1;
 }
