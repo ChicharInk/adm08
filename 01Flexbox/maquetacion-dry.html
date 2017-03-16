@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Maquetación Flexbox DRY</title>
+	<link rel="stylesheet" href="./css/responsimple.min.css">
+	<link rel="stylesheet" href="./css/maquetacion-dry.css">
+</head>
+<body>
+	<h1>Maquetación Flexbox <i>DRY</i> (DON'T REPEAT YOURSELF)</h1>
+	<article class="container  sm-flex  sm-flex-wrap  lg-jc-space-between">
+		<div class="xs-w100  sm-c6  lg-w30">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat sit cumque inventore, explicabo obcaecati quod officia
+				quaerat voluptatum est excepturi ex impedit iste at autem, debitis quos veniam fugiat.
+			</p>
+		</div>
+		<div class="xs-w100  sm-w100  sm-order-1  lg-w30  lg-order--1">
+			<img src="http://bextlan.com/img/bextlan.png">
+		</div>
+		<div class="xs-w100  sm-c6  lg-w30">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat sit cumque inventore, explicabo obcaecati quod officia
+				quaerat voluptatum est excepturi ex impedit iste at autem, debitis quos veniam fugiat.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repellat sit cumque inventore, explicabo obcaecati quod officia
+				quaerat voluptatum est excepturi ex impedit iste at autem, debitis quos veniam fugiat.
+			</p>
+		</div>
+	</article>
+	<h2>Maqueta pensando en el concepto de contenedores fluidos y contenedores fijos</h2>
+	<article class="FondoFluido  container-fluid">
+		<nav class="container  Menu">
+			Menu
+		</nav>
+		<section class="container">
+			<div>
+				<h2>be smart about your media buying on mobile</h2>
+			</div>
+		</section>
+	</article>
+</body>
+</html>

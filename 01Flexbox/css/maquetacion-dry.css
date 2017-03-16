@@ -1,0 +1,36 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	padding: 1rem;
+	border: medium solid greenyellow;
+	background-color: #333;
+}
+
+.container > div {
+	padding: 1rem;
+	border: thin solid greenyellow;
+	background-color: #999;
+}
+
+.FondoFluido {
+	color: #FFF;
+	text-align: center;
+	font-size: 5vw;
+	background-image: url('http://www.mediasmart.io/assets/images/bck-default.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.FondoFluido .container,
+.FondoFluido div {
+	border: 0;
+	background-color: transparent;
+}
+
+.Menu {
+	background-color: rgba(255, 255, 255, .5) !important;
+}
