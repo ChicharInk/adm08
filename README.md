@@ -6,7 +6,7 @@ https://github.com/jonmircha/adm08
 
 ## Desarrollo Web I: Aplicaciones Web
 
-* Jonathan MirCha <jonmircha@gmail.com>
+* [Jonathan MirCha](http://jonmircha.com/) <jonmircha@gmail.com>
 * [Bextlan](http://bextlan.com)
 * [EDteam](http://ed.team)
 
@@ -18,6 +18,9 @@ https://github.com/jonmircha/adm08
 ### Clase 1:
 
 * Maquetación CSS
+* Grid CSS
+  * [Guía de Grid CSS](http://chris.house/blog/a-complete-guide-css-grid-layout/)
+  * [Learn Grid CSS](http://learncssgrid.com/)
 
 ### Actividades
 
