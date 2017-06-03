@@ -18,3 +18,10 @@ https://github.com/jonmircha/adm08
 ### Clase 1:
 
 * Maquetación CSS
+
+### Actividades
+
+* Definir un proyecto
+* Mapa de sitio del proyecto
+* Decidir si será multi page / onepage
+* Traer el Wireframe del Home ( desktop / mobile)
