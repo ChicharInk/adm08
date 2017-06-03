@@ -1,0 +1,26 @@
+.container {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: steelblue;
+  border: thin solid black;
+
+  display: grid;
+  /*flujo de los elementos del grid*/
+  /*grid-auto-flow: row;*/
+  /*grid-auto-flow: column;*/
+  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 100px 50vh 1fr;
+  grid-template-rows: repeat(2, 1fr) 40vh;
+  grid-template-columns: repeat(7, auto);
+  grid-gap: 1rem .5rem;
+}
+
+.item {
+  background-color: skyblue;
+  font-size: 2rem;
+}
+
+.item:last-child {
+  grid-row: 3 / 4;
+  grid-column: 5 / 8;
+}

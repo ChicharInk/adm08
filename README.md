@@ -21,6 +21,7 @@ https://github.com/jonmircha/adm08
 * Grid CSS
   * [Guía de Grid CSS](http://chris.house/blog/a-complete-guide-css-grid-layout/)
   * [Learn Grid CSS](http://learncssgrid.com/)
+  * [Ejercicios Interactivos](https://codepen.io/collection/DgwjNL/)
 
 ### Actividades
 
