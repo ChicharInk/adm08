@@ -37,3 +37,7 @@ https://github.com/jonmircha/adm08
   * Layout Responsive
 
 * Arquitecturas CSS
+
+### Actividades
+
+* Traer el Wireframe del Home en código ( desktop / mobile)
