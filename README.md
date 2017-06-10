@@ -29,3 +29,11 @@ https://github.com/jonmircha/adm08
 * Mapa de sitio del proyecto
 * Decidir si será multi page / onepage
 * Traer el Wireframe del Home ( desktop / mobile)
+
+### Clase 2
+
+* Componentes Grid
+  * Navegación Móvil
+  * Layout Responsive
+
+* Arquitecturas CSS
