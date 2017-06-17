@@ -1,0 +1,41 @@
+.container {
+  /*padding: 1rem;*/
+  margin: auto;
+  width: 80vw;
+  height: 50vh;
+  border: medium solid #333;
+  background-color: steelblue;
+
+  display: flex;
+  /*
+  Define el eje principal y el transversal de la caja flexible
+    row    x - principal   y - transversal
+    column x - transversal y - principal
+  */
+  flex-direction: row; /*row | row-reverse | column | column-reverse*/
+  /*Determina la existencia o no de saltos de línea y su sentido*/
+  flex-wrap: wrap; /*nowrap | wrap | wrap-reverse*/
+  /*Alinea los elementos en el eje principal cuando sobre espacio*/
+  justify-content: center; /*flex-start | flex-end | center | space-between | space-around*/
+  /*alinea los elementos en el eje transversal cuando no hay saltos de linea*/
+  align-items: stretch; /*stretch | flex-start | flex-end | center | baseline*/
+  /*alinea los elementos en el eje transversal cuando si hay saltos de linea*/
+  align-content: center; /*flex-start | flex-end | center | space-between | space-around*/
+}
+
+.item {
+  padding: 1rem;
+  border: thin solid #333;
+  font-size: 2rem;
+  background-color: deepskyblue;
+  width: 15%;
+  height: 20%;
+}
+
+.item:nth-child(10) {
+  /*font-size: 4rem;*/
+  order: 1;
+  align-self: center;
+  flex: none;
+  flex: auto;
+}
