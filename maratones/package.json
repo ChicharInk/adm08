@@ -4,7 +4,8 @@
   "description": "Sitio para aprender diseño Web con HTML, CSS y JS",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --server --files public --directory --startPath /  --serveStatic / --reload-delay=300 --reload-debounce=500"
   },
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",

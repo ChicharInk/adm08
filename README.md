@@ -41,3 +41,12 @@ https://github.com/jonmircha/adm08
 ### Actividades
 
 * Traer el Wireframe del Home en código ( desktop / mobile)
+
+### Clase 3
+
+* Flexbox
+* Node.js y NPM
+
+### Actividades
+
+* Leer la documentación del siguiente [boilerplate](https://github.com/jonmircha/frontend-components-boilerplate)
