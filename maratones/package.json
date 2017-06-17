@@ -9,6 +9,7 @@
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "node-sass": "^4.5.3"
   }
 }
