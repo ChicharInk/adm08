@@ -1,0 +1,11 @@
+{
+  "name": "webpack-starter-kit",
+  "version": "1.0.0",
+  "description": "Un kit para iniciar proyectos frontend con ES6 y Webpack",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan MirCha <jonmircha@gmail.com>",
+  "license": "MIT"
+}
