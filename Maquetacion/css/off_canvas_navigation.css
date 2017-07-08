@@ -33,9 +33,9 @@
   grid-area: nav;
   background-color: lightsteelblue;
   transition: transform .3s ease-out;
-  transform: translateX(-100%);
+  /*transform: translateX(-100%);*/
   /*transform: translateX(100%);*/
-  /*transform: translateY(-100%);*/
+  transform: translateY(-100%);
   /*transform: translateY(100%);*/
 }
 

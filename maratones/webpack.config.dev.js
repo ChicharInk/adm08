@@ -9,7 +9,7 @@ module.exports = {
   context: srcDir,
   devtool: 'source-map',
   entry: {
-    script: './js/index.js'
+    script: './index.js'
   },
   output: {
     path: publicDir,
@@ -72,7 +72,8 @@ module.exports = {
     new ReloadPlugin(),
     //Generar los HTMLs en la carpeta pública
     new HtmlWebpackPlugin({
-      title: 'Demo Starter Kit Webpack + ES6 + SASS',
+      title: 'M A R A T Ó N - 4 2 . 1 9 5 km',
+      description: 'Bienvenid@s, en este sitio encontrarás información sobre el maravilloso mundo de los maratones.',
       //usar un template
       template: path.join(srcDir, 'index.html'),
       //donde se pondrá el archivo compilado
