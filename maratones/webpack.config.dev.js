@@ -9,7 +9,9 @@ module.exports = {
   context: srcDir,
   devtool: 'source-map',
   entry: {
-    script: './index.js'
+    script: './index.js',
+    acerca: './acerca.js',
+    contacto: './contacto.js'
   },
   output: {
     path: publicDir,
@@ -81,7 +83,35 @@ module.exports = {
       //nombre del archivo compilado
       filename: 'index.html',
       //generar un hash único al archivo js
-      hash: true
+      hash: true,
+      //indico que archivo JS cargará mi HTML
+      chunks: ['script']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Orígenes - M A R A T Ó N',
+      description: 'En esta sección te explicamos todo sobre el origen de la Maratón.',
+      //usar un template
+      template: path.join(srcDir, 'index.html'),
+      //donde se pondrá el archivo compilado
+      path: publicDir,
+      //nombre del archivo compilado
+      filename: 'acerca.html',
+      //generar un hash único al archivo js
+      hash: true,
+      chunks: ['acerca']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Contacto - M A R A T Ó N',
+      description: '¿Te gusto este sitio? Déjanos tus comentarios.',
+      //usar un template
+      template: path.join(srcDir, 'index.html'),
+      //donde se pondrá el archivo compilado
+      path: publicDir,
+      //nombre del archivo compilado
+      filename: 'contacto.html',
+      //generar un hash único al archivo js
+      hash: true,
+      chunks: ['contacto']
     })
   ]
 }

@@ -9,8 +9,8 @@ $logo-width: 4rem;
 $logo-height: 4rem;
 $logo-bg-size: 3.5rem;
 
-$header-area: '. logo hamburger'; // 'logo . hamburger' | '. logo hamburger' | 'hamburger . logo' | 'hamburger logo .'
-$logo-position: center; //start | center | end
+$header-area: 'logo . hamburger'; // 'logo . hamburger' | '. logo hamburger' | 'hamburger . logo' | 'hamburger logo .'
+$logo-position: start; //start | center | end
 $hamburger-position: end; //start | end
 
 $hamburger-color: #0096D9;
@@ -90,7 +90,7 @@ $hamburger-color: #0096D9;
   grid-area: panel;
   background-color: $header-bg-op-1;
   transition: transform .3s ease-out;
-  @include panel-direction(left); // left | right | top | bottom
+  @include panel-direction(bottom); // left | right | top | bottom
 
   &-button {
     z-index: 999;
@@ -100,14 +100,73 @@ $hamburger-color: #0096D9;
   }
 }
 
-.Menu {}
+.Menu {
+  margin-top: calc(#{$header-height} + 2rem);
+
+  &-listItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &-item {
+    list-style-type: none;
+  }
+
+  &-link {
+    display: block;
+    padding: 1rem;
+    font: {
+      weight: bold;
+      size: 1.5rem;
+    }
+    text-decoration: none;
+
+    &:hover {
+      background-color: $hamburger-color;
+      color: $header-color;
+    }
+  }
+}
 
 @media screen and (min-width: 64em) {
-  .Header {}
+  .Header {
+    &-container {
+      grid-template: {
+        columns: auto 1fr;
+        rows: $header-height;
+        areas: 'logo panel';
+      }
+    }
+  }
 
-  .Logo {}
+  .Logo { justify-self: start; }
 
-  .Panel {}
+  .Panel {
+    position: static;
+    overflow-y: visible;
+    transform: translate(0, 0);
+    background-color: transparent;
 
-  .Menu {}
+    &-button { display: none; }
+  }
+
+  .Menu {
+    margin-top: 0;
+
+    &-listItem {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &-link {
+      border-top: medium solid transparent;
+
+      &:hover {
+        border-top: medium solid $header-color;
+        background-color: transparent;
+      }
+    }
+  }
 }

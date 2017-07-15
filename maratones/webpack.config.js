@@ -1,19 +1,24 @@
 const webpack = require('webpack'),
   path = require('path'),
+  glob = require('glob-all'),
   srcDir = path.resolve( __dirname, 'src' ),
   publicDir = path.resolve( __dirname, 'public' ),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin')
+  ExtractTextPlugin = require('extract-text-webpack-plugin'),
+  PurifyCSSPlugin = require('purifycss-webpack'),
+  OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
   context: srcDir,
-  devtool: 'source-map',
-  entry: [
-    './js/index.js'
-  ],
+  devtool: 'hidden-source-map',
+  entry: {
+    script: './index.js',
+    acerca: './acerca.js',
+    contacto: './contacto.js'
+  },
   output: {
     path: publicDir,
-    filename: 'script.js',
+    filename: '[name].js',
     publicPath: './',
     sourceMapFilename: 'main.map'
   },
@@ -36,10 +41,28 @@ module.exports = {
           fallback: 'style-loader',
           use: [
             'css-loader',
-            'sass-loader'
+            'resolve-url-loader',
+            'sass-loader?sourceMap'
           ],
           publicPath: publicDir
         })
+      },
+      {
+        test: /\.pug$/,
+        use: 'pug-loader'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg|webp)$/,
+        use: [
+          'file-loader?name=[path][name].[ext]',
+          'image-webpack-loader?bypassOnDebug'
+        ]
+      },
+      {
+        test: /\.(ttf|eot|woff2?)$/,
+        use: [
+          'file-loader?name=[path][name].[ext]'
+        ]
       }
     ]
   },
@@ -54,8 +77,23 @@ module.exports = {
       disable: false,
       allChunks: true
     }),
+    new PurifyCSSPlugin({
+      paths: glob.sync([
+        path.join(__dirname, 'src/*.html'),
+        path.join(__dirname, 'src/**/*.js')
+      ])
+    }),
+    new OptimizeCssAssetsPlugin({
+      cssProcessorOptions: {
+        discardComments: {
+          removeAll: true
+        }
+      }
+    }),
     //Generar los HTMLs en la carpeta pública
     new HtmlWebpackPlugin({
+      title: 'M A R A T Ó N - 4 2 . 1 9 5 km',
+      description: 'Bienvenid@s, en este sitio encontrarás información sobre el maravilloso mundo de los maratones.',
       //usar un template
       template: path.join(srcDir, 'index.html'),
       //donde se pondrá el archivo compilado
@@ -64,16 +102,56 @@ module.exports = {
       filename: 'index.html',
       //generar un hash único al archivo js
       hash: true,
-      //minificar el HTML
-      minify: {
-        collapseWhitespace: false
-      }
+      //indico que archivo JS cargará mi HTML
+      chunks: ['script'],
+      minify : {
+        collapseWhitespace: true,
+        removeComments: true
+      },
+      favicon: './assets/img/favicon.ico'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Orígenes - M A R A T Ó N',
+      description: 'En esta sección te explicamos todo sobre el origen de la Maratón.',
+      //usar un template
+      template: path.join(srcDir, 'index.html'),
+      //donde se pondrá el archivo compilado
+      path: publicDir,
+      //nombre del archivo compilado
+      filename: 'acerca.html',
+      //generar un hash único al archivo js
+      hash: true,
+      chunks: ['acerca'],
+      minify : {
+        collapseWhitespace: true,
+        removeComments: true
+      },
+      favicon: './assets/img/favicon.ico'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Contacto - M A R A T Ó N',
+      description: '¿Te gusto este sitio? Déjanos tus comentarios.',
+      //usar un template
+      template: path.join(srcDir, 'index.html'),
+      //donde se pondrá el archivo compilado
+      path: publicDir,
+      //nombre del archivo compilado
+      filename: 'contacto.html',
+      //generar un hash único al archivo js
+      hash: true,
+      chunks: ['contacto'],
+      minify : {
+        collapseWhitespace: true,
+        removeComments: true
+      },
+      favicon: './assets/img/favicon.ico'
     })
   ],
   devServer: {
-    contentBase: srcDir,
+    contentBase: publicDir,
     publicPath: '/',
     historyApiFallback: true,
-    port: 3000
+    port: 3000,
+    open: true
   }
 }
