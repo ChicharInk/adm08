@@ -1,0 +1,36 @@
+{
+  "movies": [
+    {
+      "title": "It",
+      "year": "2017",
+      "genres": "Drama, Horror",
+      "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2MDkwNDU4NV5BMl5BanBnXkFtZTgwMjMxMzY5MjI@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    },
+    {
+      "title": "Justice League",
+      "year": "2017",
+      "genres": "Action, Adventure, Fantasy",
+      "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI2NjI2MDQ0NV5BMl5BanBnXkFtZTgwMTc1MjAwMjI@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    },
+    {
+      "title": "Wonder Woman",
+      "year": "2017",
+      "genres": "Action, Adventure, Fantasy",
+      "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDFmZjgyMTEtYTk5MC00NmY0LWJhZjktOWY2MzI5YjkzODNlXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    },
+    {
+      "title": "Dunkerque",
+      "year": "2017",
+      "genres": "Action, Drama, History",
+      "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    },
+    {
+      "title": "The killing Joke",
+      "year": "2016",
+      "genres": "Animation, Action, Crime",
+      "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTdjZTliODYtNWExMi00NjQ1LWIzN2MtN2Q5NTg5NTk3NzliL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    }
+  ],
+  "series": [],
+  "actors": []
+}

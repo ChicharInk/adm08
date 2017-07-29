@@ -6,6 +6,7 @@ const webpack = require('webpack'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   ExtractTextPlugin = require('extract-text-webpack-plugin'),
   PurifyCSSPlugin = require('purifycss-webpack'),
+  autoprefixer = require('autoprefixer'),
   OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
@@ -42,7 +43,17 @@ module.exports = {
           use: [
             'css-loader',
             'resolve-url-loader',
-            'sass-loader?sourceMap'
+            'sass-loader?sourceMap',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: (loader) => {
+                  autoprefixer({
+                    browsers: ['> 5%', 'ie 8']
+                  })
+                }
+              }
+            }
           ],
           publicPath: publicDir
         })
@@ -59,7 +70,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf|eot|woff2?)$/,
+        test: /\.(ttf|eot|woff2?|mp4|txt|xml)$/,
         use: [
           'file-loader?name=[path][name].[ext]'
         ]
@@ -81,7 +92,13 @@ module.exports = {
       paths: glob.sync([
         path.join(__dirname, 'src/*.html'),
         path.join(__dirname, 'src/**/*.js')
-      ])
+      ]),
+      purifyOptions: {
+        whitelist: [
+          'hamburger--spin',
+          'hamburger--slider'
+        ]
+      }
     }),
     new OptimizeCssAssetsPlugin({
       cssProcessorOptions: {
@@ -100,15 +117,15 @@ module.exports = {
       path: publicDir,
       //nombre del archivo compilado
       filename: 'index.html',
-      //generar un hash único al archivo js
-      hash: true,
-      //indico que archivo JS cargará mi HTML
-      chunks: ['script'],
-      minify : {
+      favicon: './assets/img/favicon.ico',
+      minify: {
         collapseWhitespace: true,
         removeComments: true
       },
-      favicon: './assets/img/favicon.ico'
+      //generar un hash único al archivo js
+      hash: true,
+      //indico que archivo JS cargará mi HTML
+      chunks: ['script']
     }),
     new HtmlWebpackPlugin({
       title: 'Orígenes - M A R A T Ó N',
@@ -119,14 +136,14 @@ module.exports = {
       path: publicDir,
       //nombre del archivo compilado
       filename: 'acerca.html',
-      //generar un hash único al archivo js
-      hash: true,
-      chunks: ['acerca'],
-      minify : {
+      favicon: './assets/img/favicon.ico',
+      minify: {
         collapseWhitespace: true,
         removeComments: true
       },
-      favicon: './assets/img/favicon.ico'
+      //generar un hash único al archivo js
+      hash: true,
+      chunks: ['acerca']
     }),
     new HtmlWebpackPlugin({
       title: 'Contacto - M A R A T Ó N',
@@ -137,14 +154,14 @@ module.exports = {
       path: publicDir,
       //nombre del archivo compilado
       filename: 'contacto.html',
-      //generar un hash único al archivo js
-      hash: true,
-      chunks: ['contacto'],
-      minify : {
+      favicon: './assets/img/favicon.ico',
+      minify: {
         collapseWhitespace: true,
         removeComments: true
       },
-      favicon: './assets/img/favicon.ico'
+      //generar un hash único al archivo js
+      hash: true,
+      chunks: ['contacto']
     })
   ],
   devServer: {

@@ -62,7 +62,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(ttf|eot|woff2?)$/,
+        test: /\.(ttf|eot|woff2?|mp4|txt|xml)$/,
         use: [
           'file-loader?name=[path][name].[ext]'
         ]
@@ -82,6 +82,11 @@ module.exports = {
       path: publicDir,
       //nombre del archivo compilado
       filename: 'index.html',
+      favicon: './assets/img/favicon.ico',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      },
       //generar un hash único al archivo js
       hash: true,
       //indico que archivo JS cargará mi HTML
@@ -96,6 +101,11 @@ module.exports = {
       path: publicDir,
       //nombre del archivo compilado
       filename: 'acerca.html',
+      favicon: './assets/img/favicon.ico',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      },
       //generar un hash único al archivo js
       hash: true,
       chunks: ['acerca']
@@ -109,6 +119,11 @@ module.exports = {
       path: publicDir,
       //nombre del archivo compilado
       filename: 'contacto.html',
+      favicon: './assets/img/favicon.ico',
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      },
       //generar un hash único al archivo js
       hash: true,
       chunks: ['contacto']
