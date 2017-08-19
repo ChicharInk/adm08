@@ -1,0 +1,30 @@
+$font-main: 'Raleway', sans-serif;
+$font-size: 16px;
+$color-main: #FFBF00;
+$color-font-dark: #393939;
+$color-font-light: #999;
+$color-bg-dark: #E4E4E4;
+$color-bg-light: #FFF;
+
+html {
+  font: {
+    family: $font-main;
+    size: $font-size;
+  }
+  color: $color-font-dark;
+  background-color: $color-bg-light;
+}
+
+a {
+  color: $color-main;
+  transition: all .3s ease-out;
+
+  &:hover { color: $color-font-light; }
+}
+
+img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
