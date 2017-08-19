@@ -1,19 +1,19 @@
-$header-bg-op-0: rgba(23, 18, 38, 0);
-$header-bg-op-1: rgba(23, 18, 38, .9);
+$header-bg-transparent: rgba(23, 18, 38, 0);
+$header-bg: rgba(23, 18, 38, .9);
 $header-color: #FFF;
 $header-height: 4rem;
 $header-container-width: 1200px;
 
-$logo-url: './assets/img/marathons-logo.svg';
+$logo-url: './assets/img/logo-mark.svg';
 $logo-width: 4rem;
 $logo-height: 4rem;
 $logo-bg-size: 3.5rem;
 
-$header-area: 'logo . hamburger'; // 'logo . hamburger' | '. logo hamburger' | 'hamburger . logo' | 'hamburger logo .'
-$logo-position: start; //start | center | end
+$header-area: '. logo hamburger'; // 'logo . hamburger' | '. logo hamburger' | 'hamburger . logo' | 'hamburger logo .'
+$logo-position: center; //start | center | end
 $hamburger-position: end; //start | end
 
-$hamburger-color: #0096D9;
+$hamburger-color: $color-main;
 
 @mixin panel-direction($dir) {
   @if $dir == left {
@@ -46,7 +46,7 @@ $hamburger-color: #0096D9;
   width: 100%;
   height: $header-height;
   transition: all .3s ease-out;
-  background-color: $header-bg-op-1;
+  background-color: $header-bg;
 
   &-container {
     margin: auto;
@@ -88,9 +88,10 @@ $hamburger-color: #0096D9;
   width: 100%;
   overflow-y: auto;
   grid-area: panel;
-  background-color: $header-bg-op-1;
+  background-color: $header-bg;
   transition: transform .3s ease-out;
-  @include panel-direction(bottom); // left | right | top | bottom
+  will-change: transform;
+  @include panel-direction(left); // left | right | top | bottom
 
   &-button {
     z-index: 999;
@@ -123,8 +124,8 @@ $hamburger-color: #0096D9;
     text-decoration: none;
 
     &:hover {
+      color: $header-bg;
       background-color: $hamburger-color;
-      color: $header-color;
     }
   }
 }
@@ -164,6 +165,7 @@ $hamburger-color: #0096D9;
       border-top: medium solid transparent;
 
       &:hover {
+        color: $header-color;
         border-top: medium solid $header-color;
         background-color: transparent;
       }

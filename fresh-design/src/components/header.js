@@ -1,12 +1,15 @@
+import Hammer from 'hammerjs'
+
 export const header = () => {
-  let menu = [
-    ['Inicio', 'index.html'],
-    ['Acerca', 'acerca.html'],
-    ['Maratones', 'maratones.html'],
-    ['Mujeres', 'mujeres.html'],
-    ['El más veloz', 'el-mas-veloz.html'],
-    ['Contacto', 'contacto.html']
-  ], menuItems = ''
+  let logoName = 'Fresh Design',
+    menu = [
+      ['Inicio', 'index.html'],
+      ['Acerca', 'acerca.html'],
+      ['Proyectos', 'proyectos.html'],
+      ['Contacto', 'contacto.html'],
+      ['Blog', 'blog.html']
+    ],
+    menuItems = ''
 
   menu.forEach(item => {
     menuItems += `
@@ -19,9 +22,9 @@ export const header = () => {
   return `
     <header class="Header">
       <section class="Header-container">
-        <h1 class="Logo">
-          <a href="./" class="Logo-link">Maratones</a>
-        </h1>
+        <div class="Logo">
+          <a href="./" class="Logo-link">${logoName}</a>
+        </div>
         <a href="#" class="Panel-button">
           <button class="hamburger  hamburger--stand" type="button">
             <span class="hamburger-box">
@@ -47,12 +50,24 @@ export function navigation () {
     panel = d.querySelector('.Panel'),
     panelBtn = d.querySelector('.Panel-button'),
     hamburger = d.querySelector('.hamburger'),
-    mq = w.matchMedia('(min-width: 64em)')
+    mq = w.matchMedia('(min-width: 64em)'),
+    hammerBody = new Hammer(d.body),
+    hammerPanel = new Hammer(panel)
 
   function closePanel (mq) {
     if (mq.matches) {
       panel.classList.remove('is-active')
       hamburger.classList.remove('is-active')
+    }
+  }
+
+  function hammerTouches (e) {
+    if ( e.type == 'swipeleft' ) {
+      panel.classList.remove('is-active')
+      hamburger.classList.remove('is-active')
+    } else if ( e.type == 'swiperight' ) {
+      panel.classList.add('is-active')
+      hamburger.classList.add('is-active')
     }
   }
 
@@ -63,4 +78,7 @@ export function navigation () {
   })
 
   mq.addListener( closePanel )
+
+  hammerBody.on('swipeleft swiperight', hammerTouches)
+  hammerPanel.on('swipeleft swiperight', hammerTouches)
 }
