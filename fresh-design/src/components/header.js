@@ -82,3 +82,41 @@ export function navigation () {
   hammerBody.on('swipeleft swiperight', hammerTouches)
   hammerPanel.on('swipeleft swiperight', hammerTouches)
 }
+
+export const transparentHeader = () => {
+  const d = document,
+    w = window,
+    header = d.querySelector('.Header'),
+    firstContent = d.querySelector('.u-firstContent'),
+    firstContentHeight = w.getComputedStyle(firstContent, null).getPropertyValue('height').split('px')[0],
+    headerHeight = w.getComputedStyle(header, null).getPropertyValue('height').split('px')[0]
+
+  let scrollTopLimit = firstContentHeight - headerHeight
+
+  function headerScroll () {
+    let scrollTop = w.pageYOffset || d.documentElement.scrollTop
+
+    if ( scrollTop > scrollTopLimit ) {
+      header.classList.add('is-active')
+    } else {
+      header.classList.remove('is-active')
+    }
+
+    /* console.log(
+      w.pageYOffset,
+      d.documentElement.scrollTop
+    ) */
+  }
+
+  d.addEventListener('DOMContentLoaded', headerScroll)
+  w.addEventListener('scroll', headerScroll, false)
+
+  /* console.log(
+    w.getComputedStyle(firstContent, null).getPropertyValue('height'),
+    w.getComputedStyle(firstContent, null).getPropertyValue('height').split('px'),
+    w.getComputedStyle(firstContent, null).getPropertyValue('height').split('px')[0],
+    firstContentHeight,
+    headerHeight,
+  ) */
+}
+

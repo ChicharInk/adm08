@@ -1,5 +1,5 @@
-$header-bg-transparent: rgba(23, 18, 38, 0);
-$header-bg: rgba(23, 18, 38, .9);
+$header-bg-transparent: rgba(0, 0, 0, 0);
+$header-bg: rgba(0, 0, 0, .9);
 $header-color: #FFF;
 $header-height: 4rem;
 $header-container-width: 1200px;
@@ -46,7 +46,9 @@ $hamburger-color: $color-main;
   width: 100%;
   height: $header-height;
   transition: all .3s ease-out;
-  background-color: $header-bg;
+  background-color: $header-bg-transparent;
+
+  &.is-active { background-color: $header-bg; }
 
   &-container {
     margin: auto;

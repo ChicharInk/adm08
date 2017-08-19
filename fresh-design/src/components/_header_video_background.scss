@@ -1,0 +1,33 @@
+.VideoBackground {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &-text {
+    position: absolute;
+    padding: 1rem;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .25);
+    color: #FFF;
+
+    & > h1 { font-size: 8vw; }
+
+    & > h2 {
+      margin-top: 1rem;
+      font-size: 4vw;
+
+      @media screen and (min-width: 64em) {
+        margin-top: 2rem;
+        width: 60%;
+        font-size: 2.5vw;
+      }
+    }
+  }
+}
