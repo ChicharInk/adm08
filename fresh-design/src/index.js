@@ -1,5 +1,6 @@
 import css from './style.scss'
 import { header, navigation, transparentHeader } from './components/header.js'
+import { footer } from './components/footer.js'
 import { headerVideoBackground, playVideo } from './components/header_video_background.js'
 import homeVideo from './assets/img/background-home.mp4'
 import homePoster from './assets/img/background-home.jpg'
@@ -63,6 +64,7 @@ const page = `
   <br>
   <br>
   <br>
+  ${footer()}
 `
 
 document.getElementById('root').innerHTML = page
