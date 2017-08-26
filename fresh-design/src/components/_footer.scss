@@ -1,0 +1,41 @@
+.Footer {
+  background-color: #000;
+  color: #FFF;
+
+  &-container {
+    padding: .5rem;
+    margin: auto;
+    max-width: $content-max-width;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      margin: .5rem auto;
+      width: 100%;
+    }
+  }
+
+
+  &-legend { order: 1; }
+}
+
+@media screen and (min-width: 64em) {
+  .Footer {
+    &-container {
+      flex-direction: row;
+
+      & > * { width: 50%; }
+    }
+
+    &-legend {
+      text-align: left;
+      order: 0;
+    }
+
+    &-nav { text-align: right; }
+  }
+}

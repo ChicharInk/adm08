@@ -1,0 +1,29 @@
+.FilterWidget {
+  &-title {}
+  &-search {}
+  &-menu {
+    & button {}
+  }
+
+  &-elements {
+    & figure {}
+    & img {}
+    & figcaption {}
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .FilterWidget {
+    &-title {}
+    &-search {}
+    &-menu {
+      & button {}
+    }
+
+    &-elements {
+      & figure {}
+      & img {}
+      & figcaption {}
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.SocialMedia {
+  &-listItem {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 2rem;
+
+    @media screen and (min-width: 64em) { font-size: 1.5rem; }
+  }
+}

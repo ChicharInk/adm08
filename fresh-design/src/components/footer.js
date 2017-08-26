@@ -1,3 +1,5 @@
+import { socialMediaNav } from './social_media_nav.js'
+
 export const footer = () => {
   return `
     <footer class="Footer">
@@ -8,10 +10,10 @@ export const footer = () => {
             <a href="http://jonmircha.com" target="_blank">@jonmircha</a>
           </small>
         </aside>
-        <nav class="SocialMedia">
-          
-        </nav>
+        <aside class="Footer-nav">
+          ${socialMediaNav()}
+        </aside>
       </section>
-    </footer>|
+    </footer>
   `
 }

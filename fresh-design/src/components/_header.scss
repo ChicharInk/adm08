@@ -2,7 +2,7 @@ $header-bg-transparent: rgba(0, 0, 0, 0);
 $header-bg: rgba(0, 0, 0, .9);
 $header-color: #FFF;
 $header-height: 4rem;
-$header-container-width: 1200px;
+$header-container-width: $content-max-width;
 
 $logo-url: './assets/img/logo-mark.svg';
 $logo-width: 4rem;
