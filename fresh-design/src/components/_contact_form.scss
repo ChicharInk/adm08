@@ -1,0 +1,93 @@
+$width-inputs: 80%;
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.ContactForm {
+  & legend {
+    font:{
+      size: 2rem;
+      weight: bold;
+    }
+  }
+
+  & > * {
+    padding: .5rem;
+    margin: 1rem auto;
+    display: block;
+    width: $width-inputs;
+  }
+
+  & input[type="submit"],
+  & input[type="reset"],
+  & input[type="button"] {
+    width: $width-inputs / 2;
+    font: {
+      size: 1rem;
+      family: $font-main;
+    }
+    background-color: $color-main;
+    color: #000;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all .3s ease-out;
+
+    &:hover{
+      background-color: #000;
+      color: $color-main;
+    }
+  }
+
+  & input:not([type="submit"]),
+  & textarea {
+    border: thin solid $color-main;
+    background-color: #000;
+    color: $color-main;
+    font: {
+      size: 1rem;
+      family: $font-main;
+    }
+  }
+
+  & textarea { resize:none; }
+
+  & [required]:valid {
+    border: thin solid #070;
+    outline: thin solid #070;
+  }
+
+  & [required]:invalid {
+    border: thin solid #C00;
+    outline: thin solid #C00;
+  }
+
+  & *:focus {
+    border: thin solid $color-main !important;
+    outline: thin solid $color-main !important;
+  }
+
+  &-error {
+    display: none;
+    padding: .5rem;
+    font-size: .85rem;
+    background-color: $color-main;
+    color: #C00;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.u-fadeIn { animation: fadeIn 2s; }
+.u-fadeOut { animation: fadeOut 2s; }

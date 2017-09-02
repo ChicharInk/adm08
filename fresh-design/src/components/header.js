@@ -109,7 +109,7 @@ export const transparentHeader = () => {
   }
 
   d.addEventListener('DOMContentLoaded', headerScroll)
-  w.addEventListener('scroll', headerScroll, false)
+  w.addEventListener('scroll', headerScroll)
 
   /* console.log(
     w.getComputedStyle(firstContent, null).getPropertyValue('height'),
