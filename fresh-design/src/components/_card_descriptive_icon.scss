@@ -1,0 +1,23 @@
+.CardDescriptiveIcon {
+  @extend .u-flexColumnCenter;
+  justify-content: flex-start;
+  margin: 1rem auto;
+  text-align: center;
+
+  &-image {
+    @extend .u-roundIcon;
+    border: medium solid  $color-main;
+    color: $color-main;
+    background-color: $color-font-dark;
+  }
+
+  &-info {
+    margin: 1rem auto;
+
+    & h3 {
+      margin-bottom: 1rem;
+      color: $color-main;
+      font-weight: bold;
+    }
+  }
+}

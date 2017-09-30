@@ -7,12 +7,13 @@
 /* Helpers */
 @import './components/helpers/box_sizing';
 @import './components/helpers/reset';
-@import './components/helpers/pages';
+@import './components/forms';
 @import './components/helpers/utilities';
+@import './components/helpers/pages';
 
 /* Components */
 @import './components/header';
 @import './components/footer';
-@import './components/header_video_background';
 @import './components/social_media_nav';
-@import './components/contact_form';
+@import './components/header_video_background';
+@import './components/card_descriptive_icon';

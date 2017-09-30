@@ -1,13 +1,13 @@
 import Hammer from 'hammerjs'
 
 export const header = () => {
-  let logoName = 'Fresh Design',
+  let logoName = 'JavaScript',
     menu = [
       ['Inicio', 'index.html'],
-      ['Acerca', 'acerca.html'],
       ['Proyectos', 'proyectos.html'],
-      ['Contacto', 'contacto.html'],
-      ['Blog', 'blog.html']
+      ['Acerca', 'acerca.html'],
+      ['Blog', 'blog.html'],
+      ['Contacto', 'contacto.html']
     ],
     menuItems = ''
 
@@ -44,15 +44,21 @@ export const header = () => {
   `
 }
 
-export function navigation () {
+export const navigation = () => {
   const d = document,
     w = window,
     panel = d.querySelector('.Panel'),
     panelBtn = d.querySelector('.Panel-button'),
-    hamburger = d.querySelector('.hamburger'),
     mq = w.matchMedia('(min-width: 64em)'),
+    hamburger = d.querySelector('.hamburger'),
     hammerBody = new Hammer(d.body),
     hammerPanel = new Hammer(panel)
+
+  panelBtn.addEventListener('click', e => {
+    e.preventDefault()
+    panel.classList.toggle('is-active')
+    hamburger.classList.toggle('is-active')
+  })
 
   function closePanel (mq) {
     if (mq.matches) {
@@ -61,26 +67,21 @@ export function navigation () {
     }
   }
 
+  mq.addListener(closePanel)
+  closePanel(mq)
+
   function hammerTouches (e) {
-    if ( e.type == 'swipeleft' ) {
+    if (e.type == 'swipeleft') {
       panel.classList.remove('is-active')
       hamburger.classList.remove('is-active')
-    } else if ( e.type == 'swiperight' ) {
+    } else if (e.type == 'swiperight') {
       panel.classList.add('is-active')
       hamburger.classList.add('is-active')
     }
   }
 
-  panelBtn.addEventListener('click', e => {
-    e.preventDefault()
-    panel.classList.toggle('is-active')
-    hamburger.classList.toggle('is-active')
-  })
-
-  mq.addListener( closePanel )
-
-  hammerBody.on('swipeleft swiperight', hammerTouches)
-  hammerPanel.on('swipeleft swiperight', hammerTouches)
+  hammerPanel.on('swipeleft  swiperight', hammerTouches)
+  hammerBody.on('swipeleft  swiperight', hammerTouches)
 }
 
 export const transparentHeader = () => {
@@ -92,31 +93,25 @@ export const transparentHeader = () => {
     headerHeight = w.getComputedStyle(header, null).getPropertyValue('height').split('px')[0]
 
   let scrollTopLimit = firstContentHeight - headerHeight
+  //console.log(firstContentHeight, headerHeight, scrollTopLimit)
 
   function headerScroll () {
     let scrollTop = w.pageYOffset || d.documentElement.scrollTop
-
-    if ( scrollTop > scrollTopLimit ) {
-      header.classList.add('is-active')
-    } else {
-      header.classList.remove('is-active')
-    }
 
     /* console.log(
       w.pageYOffset,
       d.documentElement.scrollTop
     ) */
+
+    if (scrollTop > scrollTopLimit) {
+      //console.log('abajo', scrollTop)
+      header.classList.add('is-active')
+    } else {
+      //console.log('arriba', scrollTop)
+      header.classList.remove('is-active')
+    }
   }
 
   d.addEventListener('DOMContentLoaded', headerScroll)
   w.addEventListener('scroll', headerScroll)
-
-  /* console.log(
-    w.getComputedStyle(firstContent, null).getPropertyValue('height'),
-    w.getComputedStyle(firstContent, null).getPropertyValue('height').split('px'),
-    w.getComputedStyle(firstContent, null).getPropertyValue('height').split('px')[0],
-    firstContentHeight,
-    headerHeight,
-  ) */
 }
-

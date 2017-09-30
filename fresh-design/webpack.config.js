@@ -12,7 +12,8 @@ module.exports = {
   context: srcDir,
   devtool: 'hidden-source-map',
   entry: {
-    script: './index.js'
+    script: './index.js',
+    contact: './contact.js'
   },
   output: {
     path: publicDir,
@@ -92,8 +93,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(srcDir, 'template.html'),
       filename: 'index.html',
-      title: 'Webpack Starter Kit - Vanilla JS',
-      description: 'Bienvenid@s, esta aplicación fue construida con Webpack, Vanilla JS y la filosofía de los componentes web.',
+      title: 'Fresh Design | Home',
+      description: 'Bienvenid@s, al home de Fresh Design.',
       favicon: './assets/img/favicon.ico',
       hash: true,
       minify: {
@@ -101,6 +102,19 @@ module.exports = {
         removeComments: true
       },
       chunks: ['script']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(srcDir, 'template.html'),
+      filename: 'contacto.html',
+      title: 'Contacto Fresh Design',
+      description: 'Tienes dudas, ponte en contacto con nosotros.',
+      favicon: './assets/img/favicon.ico',
+      hash: true,
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      },
+      chunks: ['contact']
     })
   ]
 }

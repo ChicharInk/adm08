@@ -10,43 +10,15 @@ https://github.com/jonmircha/adm08
 * [Bextlan](http://bextlan.com)
 * [EDteam](http://ed.team)
 
-## Enlaces de Interés
+## Frameworks Front end
 
-* [CSS Tricks](https://css-tricks.com/)
-* [Responsive Design is](https://responsivedesign.is/)
+* [Materialize](http://materializecss.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Foundation](foundation.zurb.com)
+* [Pure CSS](https://purecss.io/)
+* [Semantic UI](https://semantic-ui.com/)
 
-### Clase 1:
+## Enlaces a revisar
 
-* Maquetación CSS
-* Grid CSS
-  * [Guía de Grid CSS](http://chris.house/blog/a-complete-guide-css-grid-layout/)
-  * [Learn Grid CSS](http://learncssgrid.com/)
-  * [Ejercicios Interactivos](https://codepen.io/collection/DgwjNL/)
-
-### Actividades
-
-* Definir un proyecto
-* Mapa de sitio del proyecto
-* Decidir si será multi page / onepage
-* Traer el Wireframe del Home ( desktop / mobile)
-
-### Clase 2
-
-* Componentes Grid
-  * Navegación Móvil
-  * Layout Responsive
-
-* Arquitecturas CSS
-
-### Actividades
-
-* Traer el Wireframe del Home en código ( desktop / mobile)
-
-### Clase 3
-
-* Flexbox
-* Node.js y NPM
-
-### Actividades
-
-* Leer la documentación del siguiente [boilerplate](https://github.com/jonmircha/frontend-components-boilerplate)
+* [Responsive Design sin MediaQueries con Grid](https://ed.team/blog/responsive-design-con-grid-css-y-sin-media-queries)
+* [Modificar la url de las secciones](https://www.youtube.com/watch?v=HsmYkJ1qlHE&index=44&list=PLvq-jIkSeTUbxAO7uRoeNHH6ZCyjr7xq2)

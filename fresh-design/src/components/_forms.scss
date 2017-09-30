@@ -1,0 +1,123 @@
+$width-inputs: 80%;
+
+form {
+  & legend {
+    font: {
+      size: 1.5rem;
+      weight: bold;
+    }
+    text-align: center;
+
+    @media screen and (min-width: 64em) {
+      font-size: 2rem;
+      /* padding-left: 0;
+      text-align: left; */
+    }
+  }
+
+  & > * {
+    padding: .5rem;
+    margin: 1rem auto;
+    display: block;
+    width: $width-inputs;
+  }
+
+  & input:not([type="submit"]),
+  & textarea {
+    border: medium solid $color-main;
+    background-color: $color-bg-main;
+    color: $color-main;
+    font: {
+      size: 1rem;
+      family: $font-main;
+    }
+  }
+
+  & textarea { resize: none; }
+
+  & input[type="submit"] {
+    width: $width-inputs / 2;
+    font: {
+      family: $font-main;
+      size: 1rem;
+      weight: bold;
+    }
+    background-color: $color-main;
+    color: #000;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all .3s ease-out;
+
+    &:hover{
+      background-color: $color-bg-main;
+      color: $color-main;
+    }
+  }
+
+  & [required]:valid {
+    border: thin solid #070;
+    outline: thin solid #070;
+  }
+
+  & [required]:invalid {
+    border: thin solid #C00;
+    outline: thin solid #C00;
+  }
+
+  & [required]:focus {
+    border: thin solid $color-main;
+    outline: thin solid $color-main;
+  }
+
+  & .u-error {
+    @extend .u-hidden;
+    padding: 0 .5rem;
+    font-size: .85rem;
+    line-height: .85rem;
+    background-color: $color-main;
+    color: #C00;
+    transition: padding 800ms ease-out,
+                height 800ms ease-out,
+                opacity 800ms ease-out;
+
+    &.is-active {
+      padding: .5rem;
+      height: 1.85rem;
+      opacity: 1;
+    }
+  }
+
+  & .u-preload {
+    @extend .u-hidden;
+    text-align: center;
+    color: $color-main;
+    transition: opacity 400ms ease-out,
+                height 400ms ease-out;
+
+    &.is-active {
+      height: auto;
+      opacity: 1;
+    }
+  }
+
+  & .u-message {
+    @extend .u-hidden;
+    margin-top: -1rem;
+    padding: .5rem;
+    background-color: $color-bg-main;
+    color: $color-main;
+    font: {
+      size: 1.5rem;
+      weight: bold;
+    }
+    text-align: center;
+    transition: opacity 800ms ease-out,
+                height 800ms ease-out;
+
+    &.is-active {
+      height: auto;
+      opacity: 1;
+    }
+  }
+}

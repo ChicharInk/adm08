@@ -1,5 +1,5 @@
 $header-bg-transparent: rgba(0, 0, 0, 0);
-$header-bg: rgba(0, 0, 0, .9);
+$header-bg: $color-bg-main;
 $header-color: #FFF;
 $header-height: 4rem;
 $header-container-width: $content-max-width;
@@ -15,7 +15,9 @@ $hamburger-position: end; //start | end
 
 $hamburger-color: $color-main;
 
-@mixin panel-direction($dir) {
+$panel-dir: left; // left | right | top | bottom
+
+@mixin panel-direction ($dir) {
   @if $dir == left {
     transform: translateX(-100%);
   } @else if $dir == right {
@@ -69,16 +71,16 @@ $hamburger-color: $color-main;
   justify-self: $logo-position;
   align-self: center;
 
-  &-link {
+  &-link	{
     display: block;
     width: $logo-width;
     height: $logo-height;
     text-indent: -9999px;
     background: {
       image: url($logo-url);
+      size: $logo-bg-size;
       repeat: no-repeat;
       position: center;
-      size: $logo-bg-size;
     }
   }
 }
@@ -93,7 +95,7 @@ $hamburger-color: $color-main;
   background-color: $header-bg;
   transition: transform .3s ease-out;
   will-change: transform;
-  @include panel-direction(left); // left | right | top | bottom
+  @include panel-direction($panel-dir);
 
   &-button {
     z-index: 999;
@@ -104,16 +106,13 @@ $hamburger-color: $color-main;
 }
 
 .Menu {
-  margin-top: calc(#{$header-height} + 2rem);
+  margin-top: calc( #{$header-height} + 2rem );
 
   &-listItem {
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-
-  &-item {
-    list-style-type: none;
+    list-style: none;
   }
 
   &-link {
@@ -123,7 +122,9 @@ $hamburger-color: $color-main;
       weight: bold;
       size: 1.5rem;
     }
+    color: $hamburger-color;
     text-decoration: none;
+    transition: all .3s ease-out;
 
     &:hover {
       color: $header-bg;
@@ -167,8 +168,8 @@ $hamburger-color: $color-main;
       border-top: medium solid transparent;
 
       &:hover {
-        color: $header-color;
         border-top: medium solid $header-color;
+        color: $header-color;
         background-color: transparent;
       }
     }

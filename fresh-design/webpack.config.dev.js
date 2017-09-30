@@ -9,7 +9,8 @@ module.exports = {
   context: srcDir,
   devtool: 'hidden-source-map',
   entry: {
-    script: './index.js'
+    script: './index.js',
+    contact: './contact.js'
   },
   output: {
     path: publicDir,
@@ -70,6 +71,11 @@ module.exports = {
       template: path.join(srcDir, 'template.html'),
       filename: 'index.html',
       chunks: ['script']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(srcDir, 'template.html'),
+      filename: 'contacto.html',
+      chunks: ['contact']
     })
   ]
 }

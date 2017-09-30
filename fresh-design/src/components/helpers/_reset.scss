@@ -1,6 +1,7 @@
 $font-main: 'Raleway', sans-serif;
 $font-size: 16px;
 $color-main: #FFBF00;
+$color-bg-main: rgba(0, 0, 0, .9);
 $color-font-dark: #393939;
 $color-font-light: #999;
 $color-bg-dark: #E4E4E4;
@@ -8,6 +9,7 @@ $color-bg-light: #FFF;
 $content-max-width: 1200px;
 
 html {
+  line-height: 1.6;
   font: {
     family: $font-main;
     size: $font-size;
@@ -29,3 +31,5 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+li { list-style-position: inside; }

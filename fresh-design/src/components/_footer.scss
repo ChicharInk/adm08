@@ -1,24 +1,18 @@
 .Footer {
-  background-color: #000;
+  background-color: $color-bg-main;
   color: #FFF;
 
   &-container {
+    @extend .u-sectionContainer;
+    @extend .u-flexColumnCenter;
     padding: .5rem;
-    margin: auto;
-    max-width: $content-max-width;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     & > * {
       margin: .5rem auto;
       width: 100%;
     }
   }
-
 
   &-legend { order: 1; }
 }

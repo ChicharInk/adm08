@@ -1,0 +1,85 @@
+.HomeIntro {
+  padding: 2rem 0;
+
+  &-container {
+    @extend .u-sectionContainer;
+
+    @media screen and (min-width: 64em) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & > * {
+        padding: 1rem;
+        width: 50%;
+      }
+    }
+  }
+
+  &-description p {
+    padding: 0 .5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.Services {
+  padding: 2rem 0;
+
+  &-title {
+    font: {
+      size: 3rem;
+      weight: bold;
+    }
+    text-align: center;
+    color: $color-main;
+  }
+
+  &-container {
+    @extend .u-sectionContainer;
+    @extend .u-responsiveGrid;
+  }
+}
+
+.DemoReel {
+  height: 50vh;
+  @include u-bgFixed('./assets/img/demo-reel-home.jpg');
+
+  &-container {
+    @extend .u-flexColumnCenter;
+    height: inherit;
+    background-color: rgba(0, 0, 0, .5);
+
+    & h3 {
+      font: {
+        size: 2rem;
+        weight: bold;
+      }
+      margin-bottom: 2rem;
+      color: $color-bg-light;
+    }
+
+    & a {
+      @extend .u-roundIcon;
+      border: medium solid  $color-bg-light;
+      color: $color-bg-light;
+
+      &:hover {
+        border: medium solid  $color-main;
+        color: $color-main;
+      }
+    }
+  }
+}
+
+.Subscribe {
+  height: 50vh;
+  @include u-bgFixed('./assets/img/bg-subscribe.jpg');
+  color: #FFF;
+  text-align: center;
+
+  &-container {
+    @extend .u-flexColumnCenter;
+    height: inherit;
+    background-color: rgba(255, 255, 0, .25);
+  }
+}

@@ -1,1 +1,51 @@
+@mixin u-bgFixed ($img) {
+  background: {
+    image: url($img);
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+    attachment: fixed;
+  }
+}
 
+.u-bgTransparent { background-color: transparent; }
+
+.u-flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-flexRowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-hidden {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.u-responsiveGrid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) );
+  grid-gap: 1rem;
+}
+
+.u-roundIcon {
+  padding: .5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.75rem;
+  font-size: 2rem;
+}
+
+.u-sectionContainer {
+  max-width: $content-max-width;
+  margin: auto;
+}
